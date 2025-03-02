@@ -16,13 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'psblybread@gmail.com';
-        $mail->Password   = 'otrvrldybqmpmofo';
+        $mail->Username   = '**email here**';
+        $mail->Password   = '**app password here**';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use TLS for port 587
         $mail->Port       = 587;
 
         // Recipients
-        $mail->setFrom('psblybread@gmail.com', 'Adrian');
+        $mail->setFrom('**email here**', '**name here**');
         $mail->addAddress($email, $name); // Change this to your recipient
         $mail->addReplyTo($email, $name);
 
